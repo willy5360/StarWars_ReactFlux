@@ -1,11 +1,12 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Home } from "./views/home";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { PlanetsTab } from "./views/planets_tab.jsx";
 import People from "./component/people.jsx";
 import { PeopleTab } from "./views/people_tab.jsx";
 
@@ -21,6 +22,7 @@ const Layout = () => {
 				<Navbar />
 				<Routes>
 					<Route path="/" element={<Home />} />
+					<Route path="/planets" element={<PlanetsTab />} />
 					<Route path="/people" element={<PeopleTab />} />
 				</Routes>
 				<Footer />

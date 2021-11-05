@@ -1,10 +1,7 @@
 import React, { Fragment, useContext, useEffect, useState } from "react";
 import "../../styles/home.scss";
-import { Context } from "../store/appContext";
-import People from "../component/people.jsx";
 
 export const Home = () => {
-	const { store, actions } = useContext(Context);
 	return (
 		<Fragment>
 			<div className="fade" />
