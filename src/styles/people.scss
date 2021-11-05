@@ -1,0 +1,41 @@
+.people_card_container{
+     display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+.people_card{
+    width: 18rem;
+    margin: 1rem;
+    
+    border: solid 1px red;
+    // background-color: white;
+    border-radius: 0.5rem;
+}
+.people_card_img{
+    width: 100%;
+    
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.people_card_body_tittle{
+    text-align: center;
+    font-size: large;
+    font-family: "starWars";
+    color: white;
+}
+.footer{
+    display:flex;
+    justify-content: center;
+}
+.card_footer{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.home{
+    background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
