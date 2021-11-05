@@ -3,6 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			URL: "https://www.swapi.tech/api/",
 			planetsURL: "https://www.swapi.tech/api/planets",
+			peopleURL: "https://www.swapi.tech/api/people",
+			people: [],
 			planets: [],
 			favourites: []
 		},
@@ -25,6 +27,26 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(error => {
 						console.log(error.messsage);
+					});
+			},
+			getPeople: () => {
+				fetch(getStore().peopleURL)
+					.then(response => {
+						if (response.ok) {
+							return response.json();
+						}
+						throw new Error("fail");
+					})
+					.then(responseAsJson => {
+						setStore({ people: [...getStore().people, ...responseAsJson.results] });
+						// setStore({ peopleURL: responseAsJson.next });
+						// if (responseAsJson.next) {
+						// 	getActions().getPeople();
+						// }
+						console.log(responseAsJson.results);
+					})
+					.catch(error => {
+						console.log(error.message);
 					});
 			},
 			addFavourites: name => {
