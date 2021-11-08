@@ -5,7 +5,6 @@ import People from "../component/people.jsx";
 import starwarsimg from "../../img/starwars.png";
 
 export const Home = () => {
-	const { store, actions } = useContext(Context);
 	return (
 		<Fragment>
 			<div className="star-wars-intro">

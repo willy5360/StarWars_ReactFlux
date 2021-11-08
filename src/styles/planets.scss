@@ -1,0 +1,21 @@
+.planets_card_container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.planets_card{
+    width: 18rem;
+    margin: 1rem;
+    border: solid 1px red;
+    border-radius: 15px;
+}
+.planets_card_img{
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.planets_card_body_tittle{
+    text-align: center;
+}
+.planets_card_body{
+    padding: 1rem
+}

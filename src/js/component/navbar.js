@@ -12,6 +12,9 @@ export const Navbar = () => {
 			</Link>
 
 			<div className="ml-auto">
+				<Link to="/planets">
+					<button className="btn btn-primary">Planets</button>
+				</Link>
 				<Link to="/people">
 					<button className="people_link">People</button>
 				</Link>
