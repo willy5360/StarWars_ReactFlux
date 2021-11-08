@@ -22,7 +22,7 @@ export const PeopleTab = () => {
 
 	return (
 		<Fragment>
-			<div className="people_card_container">{cards}</div>
+			<div className="card_container">{cards}</div>
 		</Fragment>
 	);
 };
