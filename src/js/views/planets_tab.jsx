@@ -9,24 +9,26 @@ export const PlanetsTab = () => {
 	useEffect(
 		() => {
 			if (store.planets.length != 0) {
-				console.log("aqui deberia salir la lista de planetas", store.planets.name);
 				//aqui vamos a mapear
 				setCards(
 					store.planets.map((planet, index) => {
 						return <Planets key={index.toString()} name={planet.name} />;
 					})
 				);
-				console.log("aqui esta cards", cards);
+				// console.log("aqui esta cards", cards);
+				// console.log("aqui deberia salir la lista detalle del planeta 1", store.planetsURLDetail);
+				// console.log("aqui esta planets url 2", store.planetsURL_2);
+				console.log("aqui esta planets detail", store.planetsURLDetail);
 			}
 		},
-		[store.planets]
+		[store.planets, store.planetsURLDetail]
 	);
-	console.log("aqui deberia haber una lista", store.planets.results);
+	// console.log("aqui deberia haber una lista", store.planets.results);
 
 	return (
 		<Fragment>
 			<h1>Planets</h1>
-			<div className="planets_card_container">{cards}</div>
+			<div className="card_container">{cards}</div>
 		</Fragment>
 	);
 };
