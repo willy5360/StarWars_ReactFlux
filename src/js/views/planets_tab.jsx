@@ -12,7 +12,7 @@ export const PlanetsTab = () => {
 				//aqui vamos a mapear
 				setCards(
 					store.planets.map((planet, index) => {
-						return <Planets key={index.toString()} name={planet.name} />;
+						return <Planets key={index.toString()} name={planet.name} uid={planet.uid} />;
 					})
 				);
 				// console.log("aqui esta cards", cards);

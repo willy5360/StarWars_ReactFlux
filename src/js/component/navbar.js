@@ -13,21 +13,23 @@ export const Navbar = () => {
 
 			<div className="ml-auto">
 				<Link to="/planets">
-					<button className="btn btn-primary">Planets</button>
+					<button className="main_link">Planets</button>
 				</Link>
 				<Link to="/people">
 					<button className="people_link">People</button>
 				</Link>
 			</div>
-			<Dropdown>
-				<Dropdown.Toggle className="dropdown">Favourites</Dropdown.Toggle>
+			<div className="main_dropdown">
+				<Dropdown>
+					<Dropdown.Toggle className="dropdown">Favourites</Dropdown.Toggle>
 
-				<Dropdown.Menu>
-					<ul>
-						<li>{store.favourites}</li>
-					</ul>
-				</Dropdown.Menu>
-			</Dropdown>
+					<Dropdown.Menu>
+						<ul>
+							<li>{store.favourites}</li>
+						</ul>
+					</Dropdown.Menu>
+				</Dropdown>
+			</div>
 		</nav>
 	);
 };

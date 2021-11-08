@@ -1,8 +1,11 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import PropTypes from "prop-types";
 import { FavButtonPeople } from "./favButtonPeople.jsx";
+import { Link } from "react-router-dom";
+import { Context } from "../store/appContext.js";
 
 const Planets = props => {
+	const { store, actions } = useContext(Context);
 	return (
 		<Fragment>
 			<div className="main_card">
@@ -13,17 +16,22 @@ const Planets = props => {
 				<div className="main_card_body">
 					<h1 className="main_card_body_tittle">{props.name}</h1>
 					<p>Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-					<button> go somewhere</button>
-					<button>
-						<FavButtonPeople />
-					</button>
+					<div className="card_buttons">
+						<Link to={"/planets/".concat(props.uid)}>
+							<button className="info"> More info</button>
+						</Link>
+						<button className="heart">
+							<FavButtonPeople />
+						</button>
+					</div>
 				</div>
 			</div>
 		</Fragment>
 	);
 };
 Planets.propTypes = {
-	name: PropTypes.string
+	name: PropTypes.string,
+	uid: PropTypes.string
 };
 
 export default Planets;
