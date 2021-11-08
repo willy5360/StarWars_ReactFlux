@@ -1,30 +1,30 @@
 import React, { Fragment, useContext, useEffect, useState } from "react";
 import "../../styles/home.scss";
+import { Context } from "../store/appContext";
+import People from "../component/people.jsx";
+import starwarsimg from "../../img/starwars.png";
 
 export const Home = () => {
 	return (
 		<Fragment>
-			<div className="fade" />
+			<div className="star-wars-intro">
+				<p className="intro-text">A few days ago, during...</p>
 
-			<div className="star-wars">
-				<div className="crawl">
-					<div className="title">
-						<p>Episode IV</p>
-						<h1>A New Hope</h1>
+				<h2 className="main-logo">
+					<img src={starwarsimg} />
+				</h2>
+
+				<div className="main-content">
+					<div className="title-content">
+						<p className="content-header">EPISODES IV-VI A Movie Marathon</p>
+
+						<p className="content-body">
+							After years of galactic silence, civilization is on the brink of a new Star Wars release.
+							Now, with the Force preparing to awaken, the people of Earth seek solace in films of old.
+							With nowhere to turn, they gather in great numbers and watch the original trilogy without
+							rest. Three films. 6 hours. 24 minutes. Popcorn. Slushies. Total elation.
+						</p>
 					</div>
-
-					<p>
-						It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first
-						victory against the evil Galactic Empire.
-					</p>
-					<p>
-						During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon,
-						the DEATH STAR, an armored space station with enough power to destroy an entire planet.
-					</p>
-					<p>
-						Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian
-						of the stolen plans that can save her people and restore freedom to the galaxy…
-					</p>
 				</div>
 			</div>
 		</Fragment>

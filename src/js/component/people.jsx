@@ -5,18 +5,20 @@ import { FavButtonPeople } from "./favButtonPeople.jsx";
 const People = props => {
 	return (
 		<Fragment>
-			<div className="people_card">
+			<div className="main_card">
 				<img
-					className="people_card_img"
+					className="main_card_img"
 					src="https://images.pexels.com/photos/1741205/pexels-photo-1741205.jpeg?cs=srgb&dl=pexels-lina-kivaka-1741205.jpg&fm=jpg"
 				/>
-				<div className="planetsBody">
-					<h1 className="people_card_body_tittle">{props.name}</h1>
+				<div className="main_card_Body">
+					<h1 className="main_card_body_tittle">{props.name}</h1>
 					<p>contenido</p>
-					<button>More Info</button>
-					<button>
-						<FavButtonPeople />
-					</button>
+					<div className="card_buttons">
+						<button className="info">More Info</button>
+						<button className="heart">
+							<FavButtonPeople />
+						</button>
+					</div>
 				</div>
 			</div>
 		</Fragment>
