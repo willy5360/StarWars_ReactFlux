@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			URL: "https://www.swapi.tech/api/",
 			peopleURL: "https://www.swapi.tech/api/people",
 			people: [],
-			favourites: []
+			favourites: ["patatin"]
 		},
 		actions: {
 			getPeople: () => {
