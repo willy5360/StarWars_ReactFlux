@@ -8,8 +8,7 @@
      display: flex;
     flex-wrap: wrap;
     height: 100%;
-    background-color: black;
-    // background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-attachment: fixed;
     background-size: cover;
 }
@@ -65,6 +64,8 @@
     background-color: transparent;
     border: none;
     margin-left: 10rem;
+    height: fit-content;
+    width: fit-content;
 }
 .card_buttons{
     justify-content: space-between;
