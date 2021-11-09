@@ -1,10 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import { Context } from "../store/appContext";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
+	const [list, setList] = useState([]);
+
+	const deleteTask = indexList => {
+		store.favourites.filter((_, index) => index != indexList);
+		console.log(indexList);
+	};
 	return (
 		<nav className="navbar bg-dark mb-3">
 			<Link to="/">
@@ -25,7 +31,19 @@ export const Navbar = () => {
 
 					<Dropdown.Menu>
 						<ul>
-							<li>{store.favourites}</li>
+							{store.favourites.map((favourite, index) => {
+								return (
+									<li key={index.toString()}>
+										{favourite}
+										<button
+											onClick={() => {
+												deleteTask(favourite);
+											}}>
+											<i className="far fa-trash-alt" />
+										</button>
+									</li>
+								);
+							})}
 						</ul>
 					</Dropdown.Menu>
 				</Dropdown>

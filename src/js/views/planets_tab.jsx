@@ -18,7 +18,7 @@ export const PlanetsTab = () => {
 				// console.log("aqui esta cards", cards);
 				// console.log("aqui deberia salir la lista detalle del planeta 1", store.planetsURLDetail);
 				// console.log("aqui esta planets url 2", store.planetsURL_2);
-				console.log("aqui esta planets detail", store.planetsURLDetail);
+				// console.log("aqui esta planets detail", store.planetsURLDetail);
 			}
 		},
 		[store.planets, store.planetsURLDetail]

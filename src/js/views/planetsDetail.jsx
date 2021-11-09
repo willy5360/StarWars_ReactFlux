@@ -8,23 +8,29 @@ export const PlanetsDetail = () => {
 	const [cardsDetail, setCardsDetail] = useState([]);
 	let params = useParams();
 
+	useEffect(() => {
+		actions.getPlanetsInfo(params.uid);
+	}, []);
+
 	useEffect(
 		() => {
-			actions.getPlanetsInfo(params.uid);
-			// console.log("esto es param", params.uid);
-			setCardsDetail(
-				store.planetsURLDetail.map((planetDetails, index) => {
-					return (
-						<PlanetsCardDetail
-							key={index.toString()}
-							name={planetDetails.name}
-							diameter={planetDetails.diameter}
-							rotation_period={planetDetails.rotation_period}
-							climate={planetDetails.climate}
-						/>
-					);
-				})
-			);
+			if (store.planetsURLDetail.length != 0) {
+				setCardsDetail(
+					store.planetsURLDetail.map((planetDetails, index) => {
+						return (
+							<PlanetsCardDetail
+								key={index.toString()}
+								name={planetDetails.name}
+								diameter={planetDetails.diameter}
+								rotation_period={planetDetails.rotation_period}
+								climate={planetDetails.climate}
+								terrain={planetDetails.terrain}
+								population={planetDetails.population}
+							/>
+						);
+					})
+				);
+			}
 		},
 		[store.planetsURLDetail]
 	);

@@ -1,8 +1,10 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import PropTypes from "prop-types";
 import { FavButtonPeople } from "./favButtonPeople.jsx";
+import { Context } from "../store/appContext.js";
 
 const People = props => {
+	const { store, actions } = useContext(Context);
 	return (
 		<Fragment>
 			<div className="main_card">
@@ -15,7 +17,11 @@ const People = props => {
 					<p>contenido</p>
 					<div className="card_buttons">
 						<button className="info">More Info</button>
-						<button className="heart">
+						<button
+							onClick={() => {
+								actions.addFavourites(props.name);
+							}}
+							className="heart">
 							<FavButtonPeople />
 						</button>
 					</div>
