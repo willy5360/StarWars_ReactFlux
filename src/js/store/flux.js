@@ -1,8 +1,9 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			URL: "https://www.swapi.tech/api/",
-			planetsURL: "https://www.swapi.tech/api/planets",
+			planetsURL: "https://www.swapi.tech/api/planets/",
+			planets: [],
+			planetsURLDetail: [],
 			peopleURL: "https://www.swapi.tech/api/people",
 			people: [],
 			planets: [],
@@ -24,7 +25,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 						// if (responseAsJSON.next) {
 						// 	getActions().getPlanets();
 						// }
-						console.log("aqui esta el response as json", responseAsJSON.results);
 					})
 					.catch(error => {
 						console.log(error.messsage);
@@ -34,6 +34,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch(getStore().peopleURL)
 					.then(response => {
 						if (response.ok) {
+							// console.log("aqui esta el diccionario de people", response.json().results);
 							return response.json();
 						}
 						throw new Error("fail");
@@ -44,7 +45,26 @@ const getState = ({ getStore, getActions, setStore }) => {
 						// if (responseAsJson.next) {
 						// 	getActions().getPeople();
 						// }
-						console.log(responseAsJson.results);
+						// console.log(responseAsJson.results);
+					})
+					.catch(error => {
+						console.log(error.message);
+					});
+			},
+			getPlanetsInfo: id => {
+				fetch(getStore().planetsURL.concat(id))
+					.then(response => {
+						if (response.ok) {
+							return response.json();
+						}
+						throw new Error("fail on loading planets detail");
+					})
+					.then(responseAsJSON => {
+						// console.log("diccionario de planets/1", responseAsJSON);
+						// console.log("diccionario de sliceado", [planetsURL_2.slice(0, -1).concat(2)]);
+						setStore({
+							planetsURLDetail: [responseAsJSON.result.properties]
+						});
 					})
 					.catch(error => {
 						console.log(error.message);

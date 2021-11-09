@@ -9,6 +9,7 @@ import { Footer } from "./component/footer";
 import { PlanetsTab } from "./views/planets_tab.jsx";
 import People from "./component/people.jsx";
 import { PeopleTab } from "./views/people_tab.jsx";
+import { PlanetsDetail } from "./views/planetsDetail.jsx";
 
 //create your first component
 const Layout = () => {
@@ -24,6 +25,7 @@ const Layout = () => {
 					<Route path="/" element={<Home />} />
 					<Route path="/planets" element={<PlanetsTab />} />
 					<Route path="/people" element={<PeopleTab />} />
+					<Route path="/planets/:uid" element={<PlanetsDetail />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>
