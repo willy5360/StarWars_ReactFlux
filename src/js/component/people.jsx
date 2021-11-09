@@ -14,10 +14,7 @@ const People = props => {
 
 	return (
 		<div className="main_card">
-			<img
-				className="main_card_img"
-				src="https://images.pexels.com/photos/1741205/pexels-photo-1741205.jpeg?cs=srgb&dl=pexels-lina-kivaka-1741205.jpg&fm=jpg"
-			/>
+			<img className="main_card_img" src="https://media.giphy.com/media/oeGgcmHVHLVCg/giphy.gif" />
 			<div className="main_card_Body">
 				<h1 className="main_card_body_tittle">{props.name}</h1>
 				<p>contenido</p>
