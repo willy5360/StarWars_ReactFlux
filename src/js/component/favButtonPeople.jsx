@@ -1,4 +1,3 @@
-import People from "./people.jsx";
 import React, { useState } from "react";
 
 export const FavButtonPeople = () => {

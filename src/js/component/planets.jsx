@@ -20,7 +20,11 @@ const Planets = props => {
 						<Link to={"/planets/".concat(props.uid)}>
 							<button className="info"> More info</button>
 						</Link>
-						<button className="heart">
+						<button
+							onClick={() => {
+								actions.addFavourites(props.name);
+							}}
+							className="heart">
 							<FavButtonPeople />
 						</button>
 					</div>

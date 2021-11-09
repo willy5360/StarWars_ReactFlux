@@ -25,6 +25,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						// if (responseAsJSON.next) {
 						// 	getActions().getPlanets();
 						// }
+						localStorage.setItem("planets", JSON.stringify(getStore().planets));
 					})
 					.catch(error => {
 						console.log(error.messsage);

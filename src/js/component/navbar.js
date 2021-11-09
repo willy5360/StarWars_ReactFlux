@@ -5,7 +5,12 @@ import { Context } from "../store/appContext";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
+	const [list, setList] = useState([]);
 
+	const deleteTask = indexList => {
+		store.favourites.filter((_, index) => index != indexList);
+		console.log(indexList);
+	};
 	return (
 		<nav className="navbar bg-dark mb-3">
 			<Link to="/">
