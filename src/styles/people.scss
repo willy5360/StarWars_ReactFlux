@@ -8,18 +8,19 @@
      display: flex;
     flex-wrap: wrap;
     height: 100%;
-    background-color: black;
-    // background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-attachment: fixed;
     background-size: cover;
 }
 .main_card{
     width: 18rem;
     margin: 1rem;
-    
-    border: solid 1px red;
-    // background-color: white;
     border-radius: 0.5rem;
+    background-color: blue;
+    background: transparent;
+    background-color: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(5px);
+    border: none;
 }
 .main_card_img{
     width: 100%;
@@ -64,7 +65,9 @@
 .heart{
     background-color: transparent;
     border: none;
-    margin-left: 10rem;
+    margin-left: 9rem;
+    height: fit-content;
+    width: fit-content;
 }
 .card_buttons{
     justify-content: space-between;
@@ -74,4 +77,5 @@
     font-family: 'Pathway Gothic One', sans-serif;
     color: white;
     background-color: transparent;
+    margin: 1rem;
 }

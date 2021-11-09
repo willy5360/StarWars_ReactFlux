@@ -8,6 +8,9 @@ export const Home = () => {
 	return (
 		<Fragment>
 			<div className="star-wars-intro">
+				<div className="stars" />
+				<div className="twinkling" />
+				<div className="clouds" />
 				<p className="intro-text">A few days ago, during...</p>
 
 				<h2 className="main-logo">

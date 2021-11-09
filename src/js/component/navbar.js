@@ -22,7 +22,7 @@ export const Navbar = () => {
 					<button className="main_link">Planets</button>
 				</Link>
 				<Link to="/people">
-					<button className="people_link">People</button>
+					<button className="main_link">People</button>
 				</Link>
 			</div>
 			<div className="main_dropdown">
@@ -35,12 +35,9 @@ export const Navbar = () => {
 								return (
 									<li key={index.toString()}>
 										{favourite}
-										<button
-											onClick={() => {
-												deleteTask(favourite);
-											}}>
+										{/* <button className="trash">
 											<i className="far fa-trash-alt" />
-										</button>
+										</button> */}
 									</li>
 								);
 							})}
