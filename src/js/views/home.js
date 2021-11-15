@@ -1,7 +1,5 @@
 import React, { Fragment, useContext, useEffect, useState } from "react";
 import "../../styles/home.scss";
-import { Context } from "../store/appContext";
-import People from "../component/people.jsx";
 import starwarsimg from "../../img/starwars.png";
 
 export const Home = () => {

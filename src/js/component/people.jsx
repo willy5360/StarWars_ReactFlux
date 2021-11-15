@@ -39,6 +39,5 @@ const People = props => {
 People.propTypes = {
 	name: PropTypes.string,
 	uid: PropTypes.string
-	// delete: PropTypes.func,
 };
 export default People;

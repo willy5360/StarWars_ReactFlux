@@ -5,12 +5,7 @@ import { Context } from "../store/appContext";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
-	const [list, setList] = useState([]);
 
-	const deleteTask = indexList => {
-		store.favourites.filter((_, index) => index != indexList);
-		console.log(indexList);
-	};
 	return (
 		<nav className="navbar">
 			<Link to="/">
@@ -32,14 +27,7 @@ export const Navbar = () => {
 					<Dropdown.Menu>
 						<ul>
 							{store.favourites.map((favourite, index) => {
-								return (
-									<li key={index.toString()}>
-										{favourite}
-										{/* <button className="trash">
-											<i className="far fa-trash-alt" />
-										</button> */}
-									</li>
-								);
+								return <li key={index.toString()}>{favourite}</li>;
 							})}
 						</ul>
 					</Dropdown.Menu>
