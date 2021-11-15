@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			baseURl: "https://www.swapi.tech/api/",
+			baseURL: "https://www.swapi.tech/api/",
 			planetsURL: "https://www.swapi.tech/api/planets/",
 			planets: [],
 			planetsURLDetail: [],
@@ -22,10 +22,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(responseAsJSON => {
 						setStore({ planets: [...getStore().planets, ...responseAsJSON.results] });
-						setStore({ planetsURL: responseAsJSON.next });
-						if (responseAsJSON.next) {
-							getActions().getPlanets();
-						}
+						// setStore({ planetsURL: responseAsJSON.next });
+						// if (responseAsJSON.next) {
+						// 	getActions().getPlanets();
+						// }
 						localStorage.setItem("planets", JSON.stringify(getStore().planets));
 						localStorage.setItem("planets_info", JSON.stringify(getStore().planetsURLDetail));
 					})
@@ -48,14 +48,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 						// if (responseAsJson.next) {
 						// 	getActions().getPeople();
 						// }
-						// console.log(responseAsJson.results);
+						console.log(responseAsJson.results);
 					})
 					.catch(error => {
 						console.log(error.message);
 					});
 			},
 			getPlanetsInfo: id => {
-				fetch(getStore().baseURl.concat("planets/", id))
+				fetch(getStore().baseURL.concat("planets/", id))
 					.then(response => {
 						if (response.ok) {
 							return response.json();
@@ -74,7 +74,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 			getPeopleInfo: id => {
-				fetch(getStore().peopleURL.concat(id))
+				fetch(getStore().baseURL.concat("people/", id))
 					.then(response => {
 						if (response.ok) {
 							return response.json();

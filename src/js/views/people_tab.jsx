@@ -9,10 +9,10 @@ export const PeopleTab = () => {
 	useEffect(
 		() => {
 			if (store.people.length != 0) {
-				console.log("hola", store.people);
+				//console.log("hola", store.people);
 				setCards(
 					store.people.map((people, index) => {
-						return <People key={index.toString()} name={people.name} />;
+						return <People key={index.toString()} name={people.name} uid={people.uid} />;
 					})
 				);
 			}

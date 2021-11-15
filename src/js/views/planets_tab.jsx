@@ -21,7 +21,7 @@ export const PlanetsTab = () => {
 				// console.log("aqui esta planets detail", store.planetsURLDetail);
 			}
 		},
-		[store.planets, store.planetsURLDetail]
+		[store.planets]
 	);
 	// console.log("aqui deberia haber una lista", store.planets.results);
 
