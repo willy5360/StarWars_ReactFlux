@@ -19,13 +19,14 @@ export const Home = () => {
 
 				<div className="main-content">
 					<div className="title-content">
-						<p className="content-header">La Star MORISION</p>
+						<p className="content-header">The Code War</p>
 
 						<p className="content-body">
-							After years of galactic silence, civilization is on the brink of a new Star Wars release.
-							Now, with the Force preparing to awaken, the people of Earth seek solace in films of old.
-							With nowhere to turn, they gather in great numbers and watch the original trilogy without
-							rest. Three films. 6 hours. 24 minutes. Popcorn. Slushies. Total elation.
+							After years of galactic silence, students are on the brink of a new Code War release. Now,
+							with the CLICK FORCE preparing to awaken, the people of 4geeksAcademy seek solace on friday
+							evenings. With nowhere to run, they gather the great coffee and code the final project
+							without rest. Persuing their way to become Full-Stack Developers and make balance between
+							sleeping and coding...
 						</p>
 					</div>
 				</div>

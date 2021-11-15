@@ -21,13 +21,16 @@
     justify-content: center;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     padding-top: 0;
     
   }
+  
   .card_body_detail{
     flex-direction: row;
     display: flex;
+    font-size: 2rem;
+
   }
   .detail_card_img{
       width: 50%;
