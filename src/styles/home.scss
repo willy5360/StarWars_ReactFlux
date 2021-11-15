@@ -3,7 +3,9 @@
     src: url("../img/SfDistantGalaxy-0l3d.ttf");
     
 }
-
+body{
+  background-color: transparent;
+}
 
 #app {
   width: 100%;
@@ -13,8 +15,9 @@
   background-attachment: fixed;
 }
 .navbar{
-  
- background-color: black;
+  background: transparent;
+  background-color: rgba(129, 129, 129, 0.1);
+  backdrop-filter: blur(15px);
 
 }
 .navbar-brand{
@@ -29,11 +32,11 @@ a{
 
 .dropdown{
   background-color: blue;
- 
-    background: transparent;
-    background-color: rgba(255, 255, 255, .05);
-    backdrop-filter: blur(5px);
-    border: none;
+  background: transparent;
+  background-color: rgba(255, 255, 255, .05);
+  backdrop-filter: blur(5px);
+  border: none;
+  z-index: 1;
 }
 li{
   text-decoration: none;
@@ -58,11 +61,22 @@ li{
 }
 
 .footer{
- background-color: black;
+  background-color: rgba(129, 129, 129, 0.1);
+  backdrop-filter: blur(15px);
+ height: 50px;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ z-index: 1;
 }
-.card_footer{
-  color:white;
+.card_footer {
+  color:grey;
   font-family: starWars;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  
 }
 
 /*

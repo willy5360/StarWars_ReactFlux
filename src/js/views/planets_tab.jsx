@@ -27,7 +27,6 @@ export const PlanetsTab = () => {
 
 	return (
 		<Fragment>
-			<h1>Planets</h1>
 			<div className="card_container">{cards}</div>
 		</Fragment>
 	);
