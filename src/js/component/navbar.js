@@ -12,7 +12,7 @@ export const Navbar = () => {
 		console.log(indexList);
 	};
 	return (
-		<nav className="navbar bg-dark mb-3">
+		<nav className="navbar">
 			<Link to="/">
 				<span className="navbar-brand mb-0 h1 ">Star Wars</span>
 			</Link>

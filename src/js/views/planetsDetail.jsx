@@ -41,7 +41,7 @@ export const PlanetsDetail = () => {
 
 	return (
 		<Fragment>
-			<div>{cardsDetail}</div>
+			<div className="view_card_detail">{cardsDetail}</div>
 		</Fragment>
 	);
 };

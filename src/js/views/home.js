@@ -19,7 +19,7 @@ export const Home = () => {
 
 				<div className="main-content">
 					<div className="title-content">
-						<p className="content-header">EPISODES IV-VI A Movie Marathon</p>
+						<p className="content-header">La Star MORISION</p>
 
 						<p className="content-body">
 							After years of galactic silence, civilization is on the brink of a new Star Wars release.

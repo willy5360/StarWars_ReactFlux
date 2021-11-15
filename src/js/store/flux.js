@@ -27,6 +27,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						// 	getActions().getPlanets();
 						// }
 						localStorage.setItem("planets", JSON.stringify(getStore().planets));
+						localStorage.setItem("planets_info", JSON.stringify(getStore().planetsURLDetail));
 					})
 					.catch(error => {
 						console.log(error.messsage);
@@ -43,10 +44,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(responseAsJson => {
 						setStore({ people: [...getStore().people, ...responseAsJson.results] });
-						setStore({ peopleURL: responseAsJson.next });
-						if (responseAsJson.next) {
-							getActions().getPeople();
-						}
+						// setStore({ peopleURL: responseAsJson.next });
+						// if (responseAsJson.next) {
+						// 	getActions().getPeople();
+						// }
 						console.log(responseAsJson.results);
 					})
 					.catch(error => {
@@ -54,7 +55,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 			getPlanetsInfo: id => {
-				fetch(getStore().planetsURL.concat(id))
+				fetch(getStore().baseURL.concat("planets/", id))
 					.then(response => {
 						if (response.ok) {
 							return response.json();

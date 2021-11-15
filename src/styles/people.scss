@@ -28,12 +28,17 @@
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
 }
-
+.main_card_body{
+    padding: 0rem 0.5rem;
+    color: white;
+}
 .main_card_body_tittle{
+    margin-top: 1rem;
     text-align: center;
     font-size: large;
     font-family: "starWars";
-    color: white;
+    color: rgb(67, 67, 212)
+    
 }
 .footer{
     display:flex;
@@ -70,12 +75,18 @@
     width: fit-content;
 }
 .card_buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
+    margin: 0 2px;
 }
 .info{
     border-radius: 0.5rem;
+    padding: 2px 4px;
     font-family: 'Pathway Gothic One', sans-serif;
     color: white;
-    background-color: transparent;
+    background-color: rgba(67, 67, 212, 0.7);
+    backdrop-filter: blur(5px);
     margin: 1rem;
 }
