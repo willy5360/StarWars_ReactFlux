@@ -21,13 +21,12 @@ export const PlanetsTab = () => {
 				// console.log("aqui esta planets detail", store.planetsURLDetail);
 			}
 		},
-		[store.planets, store.planetsURLDetail]
+		[store.planets]
 	);
 	// console.log("aqui deberia haber una lista", store.planets.results);
 
 	return (
 		<Fragment>
-			<h1>Planets</h1>
 			<div className="card_container">{cards}</div>
 		</Fragment>
 	);
