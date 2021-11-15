@@ -12,7 +12,7 @@ const PlanetsCardDetail = props => {
 				<Card.Img
 					className="detail_card_img"
 					variant="left"
-					src="https://media.giphy.com/media/oeGgcmHVHLVCg/giphy.gif"
+					src="https://acegif.com/wp-content/uploads/solar-system-13.gif"
 				/>
 				<Card.Body>
 					<Card.Text>Diameter: {props.diameter}</Card.Text>

@@ -22,10 +22,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(responseAsJSON => {
 						setStore({ planets: [...getStore().planets, ...responseAsJSON.results] });
-						// setStore({ planetsURL: responseAsJSON.next });
-						// if (responseAsJSON.next) {
-						// 	getActions().getPlanets();
-						// }
+						setStore({ planetsURL: responseAsJSON.next });
+						if (responseAsJSON.next) {
+							getActions().getPlanets();
+						}
 						localStorage.setItem("planets", JSON.stringify(getStore().planets));
 						localStorage.setItem("planets_info", JSON.stringify(getStore().planetsURLDetail));
 					})
@@ -37,17 +37,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch(getStore().peopleURL)
 					.then(response => {
 						if (response.ok) {
-							// console.log("aqui esta el diccionario de people", response.json().results);
 							return response.json();
 						}
 						throw new Error("fail");
 					})
 					.then(responseAsJson => {
 						setStore({ people: [...getStore().people, ...responseAsJson.results] });
-						// setStore({ peopleURL: responseAsJson.next });
-						// if (responseAsJson.next) {
-						// 	getActions().getPeople();
-						// }
+						setStore({ peopleURL: responseAsJson.next });
+						if (responseAsJson.next) {
+							getActions().getPeople();
+						}
 						console.log(responseAsJson.results);
 					})
 					.catch(error => {
@@ -63,8 +62,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 						throw new Error("fail on loading planets detail");
 					})
 					.then(responseAsJSON => {
-						// console.log("diccionario de planets/1", responseAsJSON);
-						// console.log("diccionario de sliceado", [planetsURL_2.slice(0, -1).concat(2)]);
 						setStore({
 							planetsURLDetail: [responseAsJSON.result.properties]
 						});
