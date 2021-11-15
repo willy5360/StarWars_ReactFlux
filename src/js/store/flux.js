@@ -1,10 +1,11 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			baseURL: "https://www.swapi.tech/api/",
 			planetsURL: "https://www.swapi.tech/api/planets/",
 			planets: [],
 			planetsURLDetail: [],
-			peopleURL: "https://www.swapi.tech/api/people",
+			peopleURL: "https://www.swapi.tech/api/people/",
 			people: [],
 			planets: [],
 			favourites: [],
@@ -42,11 +43,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(responseAsJson => {
 						setStore({ people: [...getStore().people, ...responseAsJson.results] });
-						// setStore({ peopleURL: responseAsJson.next });
-						// if (responseAsJson.next) {
-						// 	getActions().getPeople();
-						// }
-						// console.log(responseAsJson.results);
+						setStore({ peopleURL: responseAsJson.next });
+						if (responseAsJson.next) {
+							getActions().getPeople();
+						}
+						console.log(responseAsJson.results);
 					})
 					.catch(error => {
 						console.log(error.message);
@@ -72,7 +73,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 			getPeopleInfo: id => {
-				fetch(getStore().peopleURL.concat(id))
+				fetch(getStore().baseURL.concat("people/", id))
 					.then(response => {
 						if (response.ok) {
 							return response.json();

@@ -41,7 +41,6 @@ export const PlanetsDetail = () => {
 
 	return (
 		<Fragment>
-			<h1>Hola</h1>
 			<div>{cardsDetail}</div>
 		</Fragment>
 	);

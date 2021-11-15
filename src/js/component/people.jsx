@@ -2,6 +2,7 @@ import React, { Fragment, useContext } from "react";
 import PropTypes from "prop-types";
 import { FavButtonPeople } from "./favButtonPeople.jsx";
 import { Context } from "../store/appContext.js";
+import { Link } from "react-router-dom";
 
 const People = props => {
 	const { store, actions } = useContext(Context);
@@ -19,7 +20,9 @@ const People = props => {
 				<h1 className="main_card_body_tittle">{props.name}</h1>
 				<p>contenido</p>
 				<div className="card_buttons">
-					<button className="info">More Info</button>
+					<Link to={"/people/".concat(props.uid)}>
+						<button className="info"> More info</button>
+					</Link>
 					<button
 						className="heart"
 						onClick={() => {
@@ -34,8 +37,8 @@ const People = props => {
 };
 
 People.propTypes = {
-	name: PropTypes.string
+	name: PropTypes.string,
+	uid: PropTypes.string
 	// delete: PropTypes.func,
-	// id: PropTypes.string
 };
 export default People;
