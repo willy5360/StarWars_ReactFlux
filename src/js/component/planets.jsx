@@ -15,7 +15,10 @@ const Planets = props => {
 				/>
 				<div className="main_card_body">
 					<h1 className="main_card_body_tittle">{props.name}</h1>
-					<p>Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+					<p>
+						A vast universe full of life, all of them with its own history, with an interesting population
+						to be discovered
+					</p>
 					<div className="card_buttons">
 						<Link to={"/planets/".concat(props.uid)}>
 							<button className="info"> More info</button>

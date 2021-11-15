@@ -18,7 +18,7 @@ const People = props => {
 			<img className="main_card_img" src="https://media.giphy.com/media/oeGgcmHVHLVCg/giphy.gif" />
 			<div className="main_card_body">
 				<h1 className="main_card_body_tittle">{props.name}</h1>
-				<p>Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+				<p>Here is a short description of all Star Wars characters, heros of my chilhood and even now...</p>
 				<div className="card_buttons">
 					<Link to={"/people/".concat(props.uid)}>
 						<button className="info"> More info</button>
