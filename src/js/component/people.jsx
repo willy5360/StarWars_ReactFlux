@@ -6,12 +6,6 @@ import { Link } from "react-router-dom";
 
 const People = props => {
 	const { store, actions } = useContext(Context);
-	// const [list, setList] = useState([]);
-
-	// const deleteTask = indexList => {
-	// 	setList(list.filter((_, index) => index != indexList));
-	// 	console.log(indexList);
-	// };
 
 	return (
 		<div className="main_card">
@@ -39,6 +33,5 @@ const People = props => {
 People.propTypes = {
 	name: PropTypes.string,
 	uid: PropTypes.string
-	// delete: PropTypes.func,
 };
 export default People;

@@ -9,7 +9,6 @@ export const PeopleTab = () => {
 	useEffect(
 		() => {
 			if (store.people.length != 0) {
-				//console.log("hola", store.people);
 				setCards(
 					store.people.map((people, index) => {
 						return <People key={index.toString()} name={people.name} uid={people.uid} />;
@@ -19,7 +18,6 @@ export const PeopleTab = () => {
 		},
 		[store.people]
 	);
-
 	return (
 		<Fragment>
 			<div className="card_container">{cards}</div>
