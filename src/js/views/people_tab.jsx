@@ -18,7 +18,6 @@ export const PeopleTab = () => {
 		},
 		[store.people]
 	);
-
 	return (
 		<Fragment>
 			<div className="card_container">{cards}</div>

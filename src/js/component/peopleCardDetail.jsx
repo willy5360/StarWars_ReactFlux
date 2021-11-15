@@ -12,7 +12,7 @@ const PeopleCardDetail = props => {
 				<Card.Img
 					className="detail_card_img"
 					variant="left"
-					src="https://media.giphy.com/media/oeGgcmHVHLVCg/giphy.gif"
+					src="https://img.huffingtonpost.com/asset/5bad918d240000510054aebd.gif?ops=scalefit_960_noupscale"
 				/>
 				<Card.Body>
 					<Card.Text>Height: {props.height}</Card.Text>

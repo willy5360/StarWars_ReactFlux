@@ -1,5 +1,6 @@
-import React, { Fragment, useContext, useEffect, useState } from "react";
+import React, { Fragment } from "react";
 import "../../styles/home.scss";
+
 import starwarsimg from "../../img/starwars.png";
 
 export const Home = () => {

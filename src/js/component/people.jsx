@@ -6,12 +6,6 @@ import { Link } from "react-router-dom";
 
 const People = props => {
 	const { store, actions } = useContext(Context);
-	// const [list, setList] = useState([]);
-
-	// const deleteTask = indexList => {
-	// 	setList(list.filter((_, index) => index != indexList));
-	// 	console.log(indexList);
-	// };
 
 	return (
 		<div className="main_card">
