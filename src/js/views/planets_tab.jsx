@@ -18,6 +18,7 @@ export const PlanetsTab = () => {
 		},
 		[store.planets]
 	);
+
 	return (
 		<Fragment>
 			<div className="card_container">{cards}</div>

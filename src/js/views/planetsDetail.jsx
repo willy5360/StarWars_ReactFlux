@@ -35,10 +35,6 @@ export const PlanetsDetail = () => {
 		[store.planetsURLDetail]
 	);
 
-	// useEffect(()=>{
-	//     if(Store)
-	// },[store.planets])
-
 	return (
 		<Fragment>
 			<div className="view_card_detail">{cardsDetail}</div>
