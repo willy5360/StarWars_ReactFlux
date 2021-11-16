@@ -16,7 +16,7 @@ const Planets = props => {
 				<div className="main_card_body">
 					<h1 className="main_card_body_tittle">{props.name}</h1>
 					<p>
-						A vast universe full of life, all of them with its own history, with an interesting population
+						A vast universe full of life, all of them with their own history, with an interesting population
 						to be discovered
 					</p>
 					<div className="card_buttons">

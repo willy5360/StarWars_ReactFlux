@@ -24,7 +24,7 @@ export const Home = () => {
 							After years of galactic silence, students are on the brink of a new Code War release. Now,
 							with the CLICK FORCE preparing to awaken, the people of 4geeksAcademy seek solace on friday
 							evenings. With nowhere to run, they gather the great coffee and code the final project
-							without rest. Persuing their way to become Full-Stack Developers and make balance between
+							without rest. Pursuing their way to become Full-Stack Developers and make balance between
 							sleeping and coding...
 						</p>
 					</div>
