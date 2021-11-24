@@ -7,7 +7,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planetsURLDetail: [],
 			peopleURL: "https://www.swapi.tech/api/people/",
 			people: [],
-			planets: [],
 			favourites: [],
 			peopleURLDetail: []
 		},
